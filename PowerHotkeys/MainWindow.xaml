@@ -5,8 +5,138 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PowerHotkeysWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="PowerKeys - Keyboard Shortcuts" 
+        Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Topmost="True"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="CanResize"
+        Background="#F0F0F0">
+    
+    <Window.Resources>
+        <Style x:Key="ShortcutCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Padding" Value="8"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#F8F8F8"/>
+                    <Setter Property="BorderBrush" Value="#007ACC"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="CategoryHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Foreground" Value="#666"/>
+            <Setter Property="Margin" Value="0,0,0,2"/>
+        </Style>
+        
+        <Style x:Key="ShortcutKeysStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Foreground" Value="#007ACC"/>
+            <Setter Property="Margin" Value="0,2"/>
+        </Style>
+        
+        <Style x:Key="DescriptionStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="#333"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0,2,0,0"/>
+        </Style>
+    </Window.Resources>
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header with Search and Filters -->
+        <Grid Grid.Row="0" Background="White" Margin="0,0,0,8">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="1" BlurRadius="3" Opacity="0.2"/>
+            </Grid.Effect>
+            
+            <Grid Margin="16,12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <TextBlock Text="Search:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                    <TextBox Name="SearchTextBox" Width="200" Height="24" 
+                             Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                             VerticalContentAlignment="Center"/>
+                    
+                    <TextBlock Text="Category:" VerticalAlignment="Center" Margin="16,0,8,0"/>
+                    <ComboBox Name="CategoryComboBox" Width="150" Height="24"
+                              ItemsSource="{Binding Categories}"
+                              SelectedItem="{Binding SelectedCategory}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="16,0">
+                    <TextBlock Text="Columns:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                    <Slider Name="ColumnsSlider" Width="100" Minimum="3" Maximum="8" 
+                            Value="{Binding GridColumns}" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    <TextBlock Text="{Binding GridColumns}" VerticalAlignment="Center" Margin="8,0,0,0"/>
+                </StackPanel>
+
+                <Button Grid.Column="2" Content="Settings" Width="80" Height="24" 
+                        Click="SettingsButton_Click"/>
+            </Grid>
+        </Grid>
+
+        <!-- Main Content Area -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <ItemsControl Name="ShortcutsItemsControl" 
+                          ItemsSource="{Binding FilteredShortcuts}"
+                          Margin="12">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="{Binding GridColumns}"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource ShortcutCardStyle}">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Category}" 
+                                         Style="{StaticResource CategoryHeaderStyle}"/>
+                                <TextBlock Text="{Binding Keys}" 
+                                         Style="{StaticResource ShortcutKeysStyle}"/>
+                                <TextBlock Text="{Binding Description}" 
+                                         Style="{StaticResource DescriptionStyle}"/>
+                                <TextBlock Text="{Binding Application}" 
+                                         FontSize="10" Foreground="#999" 
+                                         Margin="0,2,0,0"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!-- Status Bar -->
+        <Grid Grid.Row="2" Background="#F8F8F8" Height="24">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="-1" BlurRadius="3" Opacity="0.2"/>
+            </Grid.Effect>
+            
+            <StackPanel Orientation="Horizontal" Margin="12,0" VerticalAlignment="Center">
+                <TextBlock Text="Shortcuts: "/>
+                <TextBlock Text="{Binding FilteredShortcuts.Count}"/>
+                <TextBlock Text=" | Press Ctrl+Alt+K to toggle visibility" Margin="20,0,0,0" Foreground="#666"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
