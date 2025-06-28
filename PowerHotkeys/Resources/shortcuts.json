@@ -1,0 +1,260 @@
+[
+  {
+    "Category": "Windows System",
+    "Application": "Windows",
+    "Keys": "Win + L",
+    "Description": "Lock Screen"
+  },
+  {
+    "Category": "Windows System",
+    "Application": "Windows",
+    "Keys": "Win + D",
+    "Description": "Show Desktop"
+  },
+  {
+    "Category": "Windows System",
+    "Application": "Windows",
+    "Keys": "Alt + Tab",
+    "Description": "Switch Apps"
+  },
+  {
+    "Category": "Windows System",
+    "Application": "Windows",
+    "Keys": "Win + Tab",
+    "Description": "Task View"
+  },
+  {
+    "Category": "Windows System",
+    "Application": "Windows",
+    "Keys": "Win + I",
+    "Description": "Settings"
+  },
+  {
+    "Category": "Windows System",
+    "Application": "Windows",
+    "Keys": "Win + R",
+    "Description": "Run Dialog"
+  },
+  {
+    "Category": "Windows System",
+    "Application": "Windows",
+    "Keys": "Win + X",
+    "Description": "Quick Menu"
+  },
+  {
+    "Category": "Windows System",
+    "Application": "Windows",
+    "Keys": "Win + E",
+    "Description": "File Explorer"
+  },
+  {
+    "Category": "Windows System",
+    "Application": "Windows",
+    "Keys": "Win + A",
+    "Description": "Action Center"
+  },
+  {
+    "Category": "Windows System",
+    "Application": "Windows",
+    "Keys": "Win + S",
+    "Description": "Search"
+  },
+  {
+    "Category": "Text Editing",
+    "Application": "Universal",
+    "Keys": "Ctrl + Shift + K",
+    "Description": "Delete Line"
+  },
+  {
+    "Category": "Text Editing",
+    "Application": "Universal",
+    "Keys": "Ctrl + D",
+    "Description": "Duplicate Line"
+  },
+  {
+    "Category": "Text Editing",
+    "Application": "Universal",
+    "Keys": "Alt + Up/Down",
+    "Description": "Move Line"
+  },
+  {
+    "Category": "Text Editing",
+    "Application": "Universal",
+    "Keys": "Ctrl + L",
+    "Description": "Select Line"
+  },
+  {
+    "Category": "Text Editing",
+    "Application": "Universal",
+    "Keys": "Ctrl + Shift + L",
+    "Description": "Select All Occurrences"
+  },
+  {
+    "Category": "Text Editing",
+    "Application": "Universal",
+    "Keys": "Ctrl + F2",
+    "Description": "Select All Occurrences"
+  },
+  {
+    "Category": "Text Editing",
+    "Application": "Universal",
+    "Keys": "Ctrl + /",
+    "Description": "Toggle Comment"
+  },
+  {
+    "Category": "Text Editing",
+    "Application": "Universal",
+    "Keys": "Ctrl + Shift + /",
+    "Description": "Block Comment"
+  },
+  {
+    "Category": "Browser",
+    "Application": "Chrome/Edge",
+    "Keys": "Ctrl + T",
+    "Description": "New Tab"
+  },
+  {
+    "Category": "Browser",
+    "Application": "Chrome/Edge",
+    "Keys": "Ctrl + W",
+    "Description": "Close Tab"
+  },
+  {
+    "Category": "Browser",
+    "Application": "Chrome/Edge",
+    "Keys": "Ctrl + Shift + T",
+    "Description": "Reopen Tab"
+  },
+  {
+    "Category": "Browser",
+    "Application": "Chrome/Edge",
+    "Keys": "Ctrl + Tab",
+    "Description": "Next Tab"
+  },
+  {
+    "Category": "Browser",
+    "Application": "Chrome/Edge",
+    "Keys": "Ctrl + Shift + Tab",
+    "Description": "Previous Tab"
+  },
+  {
+    "Category": "Browser",
+    "Application": "Chrome/Edge",
+    "Keys": "Ctrl + L",
+    "Description": "Address Bar"
+  },
+  {
+    "Category": "Browser",
+    "Application": "Chrome/Edge",
+    "Keys": "Ctrl + R",
+    "Description": "Refresh"
+  },
+  {
+    "Category": "Browser",
+    "Application": "Chrome/Edge",
+    "Keys": "Ctrl + Shift + R",
+    "Description": "Hard Refresh"
+  },
+  {
+    "Category": "Browser",
+    "Application": "Chrome/Edge",
+    "Keys": "F12",
+    "Description": "Developer Tools"
+  },
+  {
+    "Category": "VS Code",
+    "Application": "Visual Studio Code",
+    "Keys": "Ctrl + Shift + P",
+    "Description": "Command Palette"
+  },
+  {
+    "Category": "VS Code",
+    "Application": "Visual Studio Code",
+    "Keys": "Ctrl + P",
+    "Description": "Quick Open"
+  },
+  {
+    "Category": "VS Code",
+    "Application": "Visual Studio Code",
+    "Keys": "Ctrl + Shift + E",
+    "Description": "Explorer"
+  },
+  {
+    "Category": "VS Code",
+    "Application": "Visual Studio Code",
+    "Keys": "Ctrl + Shift + F",
+    "Description": "Search"
+  },
+  {
+    "Category": "VS Code",
+    "Application": "Visual Studio Code",
+    "Keys": "Ctrl + Shift + G",
+    "Description": "Source Control"
+  },
+  {
+    "Category": "VS Code",
+    "Application": "Visual Studio Code",
+    "Keys": "Ctrl + Shift + D",
+    "Description": "Debug"
+  },
+  {
+    "Category": "VS Code",
+    "Application": "Visual Studio Code",
+    "Keys": "Ctrl + Shift + X",
+    "Description": "Extensions"
+  },
+  {
+    "Category": "VS Code",
+    "Application": "Visual Studio Code",
+    "Keys": "Ctrl + `",
+    "Description": "Terminal"
+  },
+  {
+    "Category": "Office",
+    "Application": "Word/Excel",
+    "Keys": "Ctrl + N",
+    "Description": "New Document"
+  },
+  {
+    "Category": "Office",
+    "Application": "Word/Excel",
+    "Keys": "Ctrl + O",
+    "Description": "Open"
+  },
+  {
+    "Category": "Office",
+    "Application": "Word/Excel",
+    "Keys": "Ctrl + S",
+    "Description": "Save"
+  },
+  {
+    "Category": "Office",
+    "Application": "Word/Excel",
+    "Keys": "Ctrl + Shift + S",
+    "Description": "Save As"
+  },
+  {
+    "Category": "Office",
+    "Application": "Word/Excel",
+    "Keys": "Ctrl + P",
+    "Description": "Print"
+  },
+  {
+    "Category": "Office",
+    "Application": "Word/Excel",
+    "Keys": "Ctrl + B",
+    "Description": "Bold"
+  },
+  {
+    "Category": "Office",
+    "Application": "Word/Excel",
+    "Keys": "Ctrl + I",
+    "Description": "Italic"
+  },
+  {
+    "Category": "Office",
+    "Application": "Word/Excel",
+    "Keys": "Ctrl + U",
+    "Description": "Underline"
+  }
+]
