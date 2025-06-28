@@ -1,0 +1,364 @@
+{
+  "categories": [
+    {
+      "name": "Windows System",
+      "color": "#0078D4",
+      "description": "Windows operating system shortcuts",
+      "isVisible": true
+    },
+    {
+      "name": "Text Editing",
+      "color": "#107C10",
+      "description": "Common text editing shortcuts",
+      "isVisible": true
+    },
+    {
+      "name": "Browser",
+      "color": "#FF4B00",
+      "description": "Web browser shortcuts",
+      "isVisible": true
+    },
+    {
+      "name": "File Management",
+      "color": "#881798",
+      "description": "File and folder management shortcuts",
+      "isVisible": true
+    },
+    {
+      "name": "Developer Tools",
+      "color": "#00BCF2",
+      "description": "Development and coding shortcuts",
+      "isVisible": true
+    }
+  ],
+  "shortcuts": [
+    {
+      "application": "Windows",
+      "category": "Windows System",
+      "keys": "Win + L",
+      "description": "Lock Screen",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Windows",
+      "category": "Windows System",
+      "keys": "Win + D",
+      "description": "Show Desktop",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Windows",
+      "category": "Windows System",
+      "keys": "Alt + Tab",
+      "description": "Switch Between Apps",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Windows",
+      "category": "Windows System",
+      "keys": "Win + Tab",
+      "description": "Task View",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Windows",
+      "category": "Windows System",
+      "keys": "Win + I",
+      "description": "Open Settings",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Windows",
+      "category": "Windows System",
+      "keys": "Win + R",
+      "description": "Run Dialog",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Windows",
+      "category": "Windows System",
+      "keys": "Win + X",
+      "description": "Quick Admin Menu",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Windows",
+      "category": "Windows System",
+      "keys": "Win + E",
+      "description": "File Explorer",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Windows",
+      "category": "Windows System",
+      "keys": "Win + S",
+      "description": "Search",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Windows",
+      "category": "Windows System",
+      "keys": "Win + V",
+      "description": "Clipboard History",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Text Editor",
+      "category": "Text Editing",
+      "keys": "Ctrl + Shift + K",
+      "description": "Delete Line",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Text Editor",
+      "category": "Text Editing",
+      "keys": "Ctrl + D",
+      "description": "Duplicate Line",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Text Editor",
+      "category": "Text Editing",
+      "keys": "Alt + Up/Down",
+      "description": "Move Line Up/Down",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Text Editor",
+      "category": "Text Editing",
+      "keys": "Ctrl + /",
+      "description": "Toggle Comment",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Text Editor",
+      "category": "Text Editing",
+      "keys": "Ctrl + Shift + L",
+      "description": "Select All Occurrences",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Text Editor",
+      "category": "Text Editing",
+      "keys": "Ctrl + G",
+      "description": "Go to Line",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Text Editor",
+      "category": "Text Editing",
+      "keys": "Ctrl + F",
+      "description": "Find",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Text Editor",
+      "category": "Text Editing",
+      "keys": "Ctrl + H",
+      "description": "Replace",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Browser",
+      "category": "Browser",
+      "keys": "Ctrl + T",
+      "description": "New Tab",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Browser",
+      "category": "Browser",
+      "keys": "Ctrl + W",
+      "description": "Close Tab",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Browser",
+      "category": "Browser",
+      "keys": "Ctrl + Shift + T",
+      "description": "Reopen Closed Tab",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Browser",
+      "category": "Browser",
+      "keys": "Ctrl + L",
+      "description": "Focus Address Bar",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Browser",
+      "category": "Browser",
+      "keys": "Ctrl + Shift + N",
+      "description": "New Incognito Window",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Browser",
+      "category": "Browser",
+      "keys": "Ctrl + R",
+      "description": "Refresh Page",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Browser",
+      "category": "Browser",
+      "keys": "F5",
+      "description": "Refresh Page",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "Browser",
+      "category": "Browser",
+      "keys": "Ctrl + Shift + R",
+      "description": "Hard Refresh",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "File Explorer",
+      "category": "File Management",
+      "keys": "Ctrl + C",
+      "description": "Copy",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "File Explorer",
+      "category": "File Management",
+      "keys": "Ctrl + V",
+      "description": "Paste",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "File Explorer",
+      "category": "File Management",
+      "keys": "Ctrl + X",
+      "description": "Cut",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "File Explorer",
+      "category": "File Management",
+      "keys": "Delete",
+      "description": "Delete to Recycle Bin",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "File Explorer",
+      "category": "File Management",
+      "keys": "Shift + Delete",
+      "description": "Permanent Delete",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "File Explorer",
+      "category": "File Management",
+      "keys": "F2",
+      "description": "Rename",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "File Explorer",
+      "category": "File Management",
+      "keys": "Ctrl + A",
+      "description": "Select All",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "VS Code",
+      "category": "Developer Tools",
+      "keys": "Ctrl + `",
+      "description": "Toggle Terminal",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "VS Code",
+      "category": "Developer Tools",
+      "keys": "Ctrl + Shift + P",
+      "description": "Command Palette",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "VS Code",
+      "category": "Developer Tools",
+      "keys": "Ctrl + P",
+      "description": "Quick Open File",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "VS Code",
+      "category": "Developer Tools",
+      "keys": "F12",
+      "description": "Go to Definition",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "VS Code",
+      "category": "Developer Tools",
+      "keys": "Ctrl + F12",
+      "description": "Go to Implementation",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "VS Code",
+      "category": "Developer Tools",
+      "keys": "Shift + F12",
+      "description": "Go to References",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "VS Code",
+      "category": "Developer Tools",
+      "keys": "F2",
+      "description": "Rename Symbol",
+      "isCustom": false,
+      "isVisible": true
+    },
+    {
+      "application": "VS Code",
+      "category": "Developer Tools",
+      "keys": "Ctrl + Shift + F",
+      "description": "Search in Files",
+      "isCustom": false,
+      "isVisible": true
+    }
+  ]
+}

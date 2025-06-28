@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Pn/vnzLvUQPiQuhHLZQz+5J2h2crJTNvrp896/qpZLY7KXz7i3pyps9UwDFnOxPVMP2Enw6HYJR0QMTM84iPuA==",
+  "success": true,
+  "projectFilePath": "/home/runner/work/UsefulHotkeysHeatmap/UsefulHotkeysHeatmap/PowerHotkeysWPF/Tests/Tests.csproj",
+  "expectedPackageFiles": [
+    "/home/runner/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
