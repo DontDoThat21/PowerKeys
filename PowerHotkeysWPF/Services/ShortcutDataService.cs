@@ -100,8 +100,6 @@ public class ShortcutDataService
             if (!File.Exists(_dataFilePath))
             {
                 var resourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "shortcuts.json");
-                Console.WriteLine($"Looking for shortcuts.json at: {resourcePath}");
-                Console.WriteLine($"File exists: {File.Exists(resourcePath)}");
                 
                 if (File.Exists(resourcePath))
                 {
@@ -109,11 +107,19 @@ public class ShortcutDataService
                 }
                 else
                 {
-                    // Fallback to empty data
-                    Console.WriteLine("Shortcuts.json not found, creating empty data");
-                    _shortcuts = new List<Shortcut>();
-                    _categories = new List<Category>();
-                    return;
+                    // Try alternative path for WPF applications
+                    var altResourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "shortcuts.json");
+                    if (File.Exists(altResourcePath))
+                    {
+                        jsonContent = await File.ReadAllTextAsync(altResourcePath);
+                    }
+                    else
+                    {
+                        // Fallback to empty data
+                        _shortcuts = new List<Shortcut>();
+                        _categories = new List<Category>();
+                        return;
+                    }
                 }
             }
             else
