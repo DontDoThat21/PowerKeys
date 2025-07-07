@@ -1,8 +1,8 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
-using PowerHotkeysWPF.Models;
 using PowerHotkeysWPF.Services;
+using Shortcut = PowerHotkeysWPF.Models.Shortcut;
 
 namespace PowerHotkeysWPF.ViewModels;
 

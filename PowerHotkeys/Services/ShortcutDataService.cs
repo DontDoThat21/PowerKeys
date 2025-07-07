@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using Newtonsoft.Json;
 using PowerHotkeysWPF.Models;
+using Shortcut = PowerHotkeysWPF.Models.Shortcut;
 
 namespace PowerHotkeysWPF.Services;
 

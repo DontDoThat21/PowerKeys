@@ -5,6 +5,8 @@ using System.Windows.Media.Animation;
 using PowerHotkeysWPF.Services;
 using PowerHotkeysWPF.ViewModels;
 using PowerHotkeysWPF.Views;
+using Application = System.Windows.Application;
+using MessageBox = System.Windows.MessageBox;
 
 namespace PowerHotkeysWPF;
 
