@@ -3,6 +3,141 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:PowerHotkeysWPF">
     <Application.Resources>
-         
+        <!-- Global Dark Theme Resources -->
+        <SolidColorBrush x:Key="DarkBackgroundBrush" Color="#0E0E0E"/>
+        <SolidColorBrush x:Key="DarkSurfaceBrush" Color="#1E1E1E"/>
+        <SolidColorBrush x:Key="DarkBorderBrush" Color="#333333"/>
+        <SolidColorBrush x:Key="DarkTextBrush" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="DarkSecondaryTextBrush" Color="#B0B0B0"/>
+        <SolidColorBrush x:Key="DarkAccentBrush" Color="#00D084"/>
+        <SolidColorBrush x:Key="DarkAccentHoverBrush" Color="#00A66D"/>
+        
+        <!-- Global Window Style -->
+        <Style x:Key="DarkWindowStyle" TargetType="Window">
+            <Setter Property="Background" Value="{StaticResource DarkBackgroundBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource DarkTextBrush}"/>
+        </Style>
+        
+        <!-- Global ComboBox Style -->
+        <Style TargetType="ComboBox">
+            <Setter Property="Background" Value="{StaticResource DarkSurfaceBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource DarkTextBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource DarkBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton Grid.Column="2" 
+                                        Focusable="false" 
+                                        IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
+                                        ClickMode="Press">
+                                <ToggleButton.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+                                            <Border Background="{StaticResource DarkSurfaceBrush}" 
+                                                  BorderBrush="{StaticResource DarkBorderBrush}" 
+                                                  BorderThickness="1" 
+                                                  CornerRadius="2"/>
+                                            <Path x:Name="Arrow" 
+                                                Data="M 0 0 L 4 4 L 8 0 Z" 
+                                                Fill="{StaticResource DarkTextBrush}" 
+                                                HorizontalAlignment="Center" 
+                                                VerticalAlignment="Center" 
+                                                Margin="0,0,5,0"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </ToggleButton.Template>
+                            </ToggleButton>
+                            <ContentPresenter Name="ContentSite" 
+                                            IsHitTestVisible="False" 
+                                            Content="{TemplateBinding SelectionBoxItem}" 
+                                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" 
+                                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" 
+                                            Margin="5,3,25,3" 
+                                            VerticalAlignment="Center" 
+                                            HorizontalAlignment="Left"/>
+                            <Popup Name="Popup" 
+                                 Placement="Bottom" 
+                                 IsOpen="{TemplateBinding IsDropDownOpen}" 
+                                 AllowsTransparency="True" 
+                                 Focusable="False" 
+                                 PopupAnimation="Slide">
+                                <Grid Name="DropDown" 
+                                    SnapsToDevicePixels="True" 
+                                    MinWidth="{TemplateBinding ActualWidth}" 
+                                    MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border x:Name="DropDownBorder" 
+                                          Background="{StaticResource DarkSurfaceBrush}" 
+                                          BorderBrush="{StaticResource DarkBorderBrush}" 
+                                          BorderThickness="1"
+                                          CornerRadius="2"/>
+                                    <ScrollViewer Margin="4,6,4,6" 
+                                                SnapsToDevicePixels="True" 
+                                                Background="{StaticResource DarkSurfaceBrush}">
+                                        <StackPanel IsItemsHost="True" 
+                                                  KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <!-- Global ComboBoxItem Style -->
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="Background" Value="{StaticResource DarkSurfaceBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource DarkTextBrush}"/>
+            <Setter Property="Padding" Value="6,4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border Background="{TemplateBinding Background}" 
+                              BorderBrush="{TemplateBinding BorderBrush}" 
+                              BorderThickness="{TemplateBinding BorderThickness}" 
+                              Padding="{TemplateBinding Padding}">
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="True">
+                                <Setter Property="Background" Value="{StaticResource DarkAccentBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="{StaticResource DarkAccentBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <!-- Global ScrollBar Style -->
+        <Style TargetType="ScrollBar">
+            <Setter Property="Background" Value="{StaticResource DarkSurfaceBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource DarkBorderBrush}"/>
+            <Setter Property="Width" Value="12"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ScrollBar">
+                        <Grid>
+                            <Rectangle Fill="{StaticResource DarkSurfaceBrush}"/>
+                            <Track Name="PART_Track" IsDirectionReversed="True">
+                                <Track.Thumb>
+                                    <Thumb Background="{StaticResource DarkBorderBrush}" 
+                                         BorderBrush="{StaticResource DarkBorderBrush}"/>
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="PART_Track" Property="Thumb.Background" Value="{StaticResource DarkAccentBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

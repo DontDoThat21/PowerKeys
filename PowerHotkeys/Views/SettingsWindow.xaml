@@ -9,7 +9,269 @@
         Height="400" Width="500"
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize"
-        Background="#F0F0F0">
+        Background="#0E0E0E">
+    
+    <Window.Resources>
+        <!-- Dark GroupBox Style -->
+        <Style x:Key="DarkGroupBoxStyle" TargetType="GroupBox">
+            <Setter Property="Background" Value="#1E1E1E"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="#333333"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GroupBox">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Background="#2D2D2D" 
+                                  BorderBrush="#333333" BorderThickness="1,1,1,0"
+                                  CornerRadius="4,4,0,0" Padding="8,4">
+                                <TextBlock Text="{TemplateBinding Header}" 
+                                         Foreground="#00D084" FontWeight="Bold"/>
+                            </Border>
+                            <Border Grid.Row="1" Background="#1E1E1E" 
+                                  BorderBrush="#333333" BorderThickness="1,0,1,1"
+                                  CornerRadius="0,0,4,4" Padding="{TemplateBinding Padding}">
+                                <ContentPresenter/>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Dark TextBox Style -->
+        <Style x:Key="DarkTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="#1E1E1E"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="#333333"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="2">
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                        Margin="{TemplateBinding Padding}"
+                                        VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="#00D084"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Dark CheckBox Style -->
+        <Style x:Key="DarkCheckBoxStyle" TargetType="CheckBox">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="CheckBox">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0" Width="16" Height="16" 
+                                  Background="#1E1E1E" BorderBrush="#333333" 
+                                  BorderThickness="1" CornerRadius="2" 
+                                  Margin="0,0,6,0">
+                                <Path x:Name="CheckMark" 
+                                    Data="M 1,4 L 4,7 L 10,1" 
+                                    Stroke="#00D084" StrokeThickness="2" 
+                                    Visibility="Collapsed"/>
+                            </Border>
+                            <ContentPresenter Grid.Column="1" 
+                                            Content="{TemplateBinding Content}"
+                                            VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Dark Button Style -->
+        <Style x:Key="DarkButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#1E1E1E"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="#333333"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="2">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center" 
+                                            Content="{TemplateBinding Content}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#2D2D2D"/>
+                                <Setter Property="BorderBrush" Value="#00D084"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#00D084"/>
+                                <Setter Property="BorderBrush" Value="#00D084"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Dark Slider Style -->
+        <Style x:Key="DarkSliderStyle" TargetType="Slider">
+            <Setter Property="Background" Value="#333333"/>
+            <Setter Property="Foreground" Value="#00D084"/>
+        </Style>
+
+        <!-- Dark ComboBox Style -->
+        <Style x:Key="DarkComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="Background" Value="#1E1E1E"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="#333333"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton x:Name="ToggleButton" 
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                        ClickMode="Press">
+                                <ToggleButton.Template>
+                                    <ControlTemplate TargetType="ToggleButton">
+                                        <Border Background="{TemplateBinding Background}" 
+                                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                CornerRadius="2">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="20"/>
+                                                </Grid.ColumnDefinitions>
+                                                <ContentPresenter Grid.Column="0" 
+                                                                Content="{Binding SelectionBoxItem, RelativeSource={RelativeSource AncestorType=ComboBox}}"
+                                                                Margin="8,4" 
+                                                                VerticalAlignment="Center"
+                                                                HorizontalAlignment="Left"/>
+                                                <Path Grid.Column="1" 
+                                                    Data="M 0 0 L 4 4 L 8 0 Z" 
+                                                    Fill="#FFFFFF" 
+                                                    HorizontalAlignment="Center" 
+                                                    VerticalAlignment="Center"/>
+                                            </Grid>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#2D2D2D"/>
+                                                <Setter Property="BorderBrush" Value="#00D084"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Background" Value="#2D2D2D"/>
+                                                <Setter Property="BorderBrush" Value="#00D084"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </ToggleButton.Template>
+                            </ToggleButton>
+                            <ContentPresenter x:Name="ContentSite" 
+                                            Content="{TemplateBinding SelectionBoxItem}"
+                                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                            Margin="8,4" 
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Left" 
+                                            IsHitTestVisible="False"/>
+                            <Popup x:Name="Popup" 
+                                 Placement="Bottom" 
+                                 IsOpen="{TemplateBinding IsDropDownOpen}" 
+                                 AllowsTransparency="True" 
+                                 Focusable="False" 
+                                 PopupAnimation="Slide">
+                                <Grid MinWidth="{TemplateBinding ActualWidth}" 
+                                    MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border Background="#1E1E1E" 
+                                          BorderBrush="#333333" 
+                                          BorderThickness="1" 
+                                          CornerRadius="2">
+                                        <ScrollViewer>
+                                            <StackPanel IsItemsHost="True" 
+                                                      KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="ToggleButton" Property="BorderBrush" Value="#00D084"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Resources>
+                <!-- Dark ComboBoxItem Style -->
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="#FFFFFF"/>
+                    <Setter Property="Padding" Value="8,4"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ComboBoxItem">
+                                <Border Background="{TemplateBinding Background}" 
+                                        Padding="{TemplateBinding Padding}">
+                                    <ContentPresenter Content="{TemplateBinding Content}"
+                                                    VerticalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsHighlighted" Value="True">
+                                        <Setter Property="Background" Value="#00D084"/>
+                                        <Setter Property="Foreground" Value="#FFFFFF"/>
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#2D2D2D"/>
+                                        <Setter Property="Foreground" Value="#FFFFFF"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="DarkTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+
+        <Style x:Key="DarkSecondaryTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#B0B0B0"/>
+        </Style>
+    </Window.Resources>
     
     <Grid Margin="20">
         <Grid.RowDefinitions>
@@ -21,58 +283,69 @@
         <StackPanel Grid.Row="0">
             
             <!-- Global Hotkey Section -->
-            <GroupBox Header="Global Hotkey" Padding="12" Margin="0,0,0,16">
+            <GroupBox Header="Global Hotkey" Padding="12" Margin="0,0,0,16" Style="{StaticResource DarkGroupBoxStyle}">
                 <StackPanel>
                     <TextBlock Text="Hotkey combination to show/hide PowerKeys:" 
-                               TextWrapping="Wrap" Margin="0,0,0,8"/>
+                               TextWrapping="Wrap" Margin="0,0,0,8"
+                               Style="{StaticResource DarkTextBlockStyle}"/>
                     <TextBox Text="{Binding GlobalHotkey}" 
-                             Width="200" HorizontalAlignment="Left" Margin="0,0,0,8"/>
+                             Width="200" HorizontalAlignment="Left" Margin="0,0,0,8"
+                             Style="{StaticResource DarkTextBoxStyle}"/>
                     <TextBlock Text="Example: Ctrl+Alt+K, Ctrl+Shift+P, etc." 
-                               FontSize="11" Foreground="#666" 
-                               TextWrapping="Wrap"/>
+                               FontSize="11" 
+                               TextWrapping="Wrap"
+                               Style="{StaticResource DarkSecondaryTextBlockStyle}"/>
                 </StackPanel>
             </GroupBox>
 
             <!-- Startup Section -->
-            <GroupBox Header="Startup" Padding="12" Margin="0,0,0,16">
+            <GroupBox Header="Startup" Padding="12" Margin="0,0,0,16" Style="{StaticResource DarkGroupBoxStyle}">
                 <CheckBox Content="Start PowerKeys with Windows" 
-                          IsChecked="{Binding StartWithWindows}"/>
+                          IsChecked="{Binding StartWithWindows}"
+                          Style="{StaticResource DarkCheckBoxStyle}"/>
             </GroupBox>
 
             <!-- Display Section -->
-            <GroupBox Header="Display" Padding="12" Margin="0,0,0,16">
+            <GroupBox Header="Display" Padding="12" Margin="0,0,0,16" Style="{StaticResource DarkGroupBoxStyle}">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,8">
                         <TextBlock Text="Grid Columns:" Width="100" 
-                                   VerticalAlignment="Center"/>
+                                   VerticalAlignment="Center"
+                                   Style="{StaticResource DarkTextBlockStyle}"/>
                         <Slider Value="{Binding GridColumns}" 
                                 Minimum="3" Maximum="8" 
                                 Width="150" 
                                 TickFrequency="1" 
-                                IsSnapToTickEnabled="True"/>
+                                IsSnapToTickEnabled="True"
+                                Style="{StaticResource DarkSliderStyle}"/>
                         <TextBlock Text="{Binding GridColumns}" 
                                    Margin="8,0,0,0" 
-                                   VerticalAlignment="Center"/>
+                                   VerticalAlignment="Center"
+                                   Style="{StaticResource DarkTextBlockStyle}"/>
                     </StackPanel>
                     
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <TextBlock Text="Theme:" Width="100" 
-                                   VerticalAlignment="Center"/>
+                                   VerticalAlignment="Center"
+                                   Style="{StaticResource DarkTextBlockStyle}"/>
                         <ComboBox SelectedItem="{Binding Theme}" 
                                   ItemsSource="{Binding AvailableThemes}"
-                                  Width="150"/>
+                                  Width="150"
+                                  Style="{StaticResource DarkComboBoxStyle}"/>
                     </StackPanel>
                 </StackPanel>
             </GroupBox>
 
             <!-- Information Section -->
-            <GroupBox Header="Information" Padding="12">
+            <GroupBox Header="Information" Padding="12" Style="{StaticResource DarkGroupBoxStyle}">
                 <StackPanel>
-                    <TextBlock Text="PowerKeys v1.0.0" FontWeight="Bold" Margin="0,0,0,4"/>
+                    <TextBlock Text="PowerKeys v1.0.0" FontWeight="Bold" Margin="0,0,0,4" Style="{StaticResource DarkTextBlockStyle}"/>
                     <TextBlock Text="Keyboard shortcuts reference tool" 
-                               FontSize="11" Foreground="#666" Margin="0,0,0,4"/>
+                               FontSize="11" Margin="0,0,0,4"
+                               Style="{StaticResource DarkSecondaryTextBlockStyle}"/>
                     <TextBlock Text="© 2024 PowerKeys" 
-                               FontSize="11" Foreground="#666"/>
+                               FontSize="11"
+                               Style="{StaticResource DarkSecondaryTextBlockStyle}"/>
                 </StackPanel>
             </GroupBox>
         </StackPanel>
@@ -82,10 +355,12 @@
                     HorizontalAlignment="Right" Margin="0,16,0,0">
             <Button Content="OK" Width="80" Height="30" 
                     Margin="0,0,8,0" IsDefault="True"
-                    Click="OkButton_Click"/>
+                    Click="OkButton_Click"
+                    Style="{StaticResource DarkButtonStyle}"/>
             <Button Content="Cancel" Width="80" Height="30" 
                     IsCancel="True"
-                    Click="CancelButton_Click"/>
+                    Click="CancelButton_Click"
+                    Style="{StaticResource DarkButtonStyle}"/>
         </StackPanel>
     </Grid>
 </Window>
