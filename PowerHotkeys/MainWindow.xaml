@@ -9,7 +9,7 @@
         Height="600" Width="1000"
         WindowStartupLocation="CenterScreen"
         Topmost="True"
-        WindowStyle="SingleBorderWindow"
+        WindowStyle="None"
         ResizeMode="CanResize"
         Background="#0E0E0E">
     
@@ -138,8 +138,8 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="9*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
@@ -149,16 +149,21 @@
                 <DropShadowEffect ShadowDepth="1" BlurRadius="3" Opacity="0.4" Color="#000000"/>
             </Grid.Effect>
             
-            <Grid Margin="16,12">
+            <Grid Margin="16,4">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
 
-                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal" Grid.RowSpan="2">
                     <TextBlock Text="Search:" VerticalAlignment="Center" Margin="0,0,8,0" Style="{StaticResource DarkTextBlockStyle}"/>
-                    <TextBox Name="SearchTextBox" Width="200" Height="24" 
+                    <TextBox Name="SearchTextBox" Width="200" Height="24"
                              Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
                              VerticalContentAlignment="Center"
                              Style="{StaticResource DarkTextBoxStyle}"/>

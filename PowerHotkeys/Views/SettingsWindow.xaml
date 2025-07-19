@@ -9,7 +9,7 @@
         Height="400" Width="500"
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize"
-        Background="#0E0E0E">
+        Background="#0E0E0E" WindowStyle="None">
     
     <Window.Resources>
         <!-- Dark GroupBox Style -->
