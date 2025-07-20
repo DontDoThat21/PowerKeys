@@ -89,15 +89,24 @@ public class MainViewModel : INotifyPropertyChanged
         {
             _allShortcuts = await _dataService.LoadShortcutsAsync();
             
-            // Update categories
+            // Update categories - ensure we get all distinct categories
             var categories = new ObservableCollection<string> { "All" };
-            var distinctCategories = _allShortcuts.Select(s => s.Category).Distinct().OrderBy(c => c);
+            var distinctCategories = _allShortcuts
+                .Select(s => s.Category)
+                .Where(c => !string.IsNullOrWhiteSpace(c))
+                .Distinct()
+                .OrderBy(c => c);
+            
             foreach (var category in distinctCategories)
             {
                 categories.Add(category);
             }
-            Categories = categories;
             
+            // Debug: Log all loaded categories
+            System.Diagnostics.Debug.WriteLine($"Loaded {_allShortcuts.Count} shortcuts");
+            System.Diagnostics.Debug.WriteLine($"Categories found: {string.Join(", ", distinctCategories)}");
+            
+            Categories = categories;
             FilterShortcuts();
         }
         catch (Exception ex)

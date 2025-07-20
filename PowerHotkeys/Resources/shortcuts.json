@@ -210,6 +210,714 @@
     "Description": "Terminal"
   },
   {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Shift + N",
+    "Description": "New Project"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Shift + O",
+    "Description": "Open Project/Solution"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + O",
+    "Description": "Open File"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + S",
+    "Description": "Save"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Shift + S",
+    "Description": "Save All"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "F5",
+    "Description": "Start Debugging"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + F5",
+    "Description": "Start Without Debugging"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Shift + F5",
+    "Description": "Stop Debugging"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "F9",
+    "Description": "Toggle Breakpoint"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "F10",
+    "Description": "Step Over"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "F11",
+    "Description": "Step Into"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Shift + F11",
+    "Description": "Step Out"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + F",
+    "Description": "Find"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + H",
+    "Description": "Replace"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Shift + F",
+    "Description": "Find in Files"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Shift + H",
+    "Description": "Replace in Files"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "F12",
+    "Description": "Go To Definition"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + F12",
+    "Description": "Go To Declaration"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + -",
+    "Description": "Navigate Backward"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Shift + -",
+    "Description": "Navigate Forward"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + ,",
+    "Description": "Go To All"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + T",
+    "Description": "Go To File"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Shift + T",
+    "Description": "Go To Type"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Alt + A",
+    "Description": "Go To Member"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + K, Ctrl + C",
+    "Description": "Comment Selection"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + K, Ctrl + U",
+    "Description": "Uncomment Selection"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + K, Ctrl + D",
+    "Description": "Format Document"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + K, Ctrl + F",
+    "Description": "Format Selection"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Space",
+    "Description": "IntelliSense"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Shift + Space",
+    "Description": "Parameter Info"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + J",
+    "Description": "List Members"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + K, Ctrl + I",
+    "Description": "Quick Info"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + .",
+    "Description": "Quick Actions and Refactorings"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Shift + B",
+    "Description": "Build Solution"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Break",
+    "Description": "Cancel Build"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Alt + L",
+    "Description": "Solution Explorer"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + \\, E",
+    "Description": "Error List"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + \\, Ctrl + M",
+    "Description": "Team Explorer"
+  },
+  {
+    "Category": "Visual Studio 2022",
+    "Application": "Visual Studio",
+    "Keys": "Ctrl + Alt + O",
+    "Description": "Output"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Shift + R",
+    "Description": "Refactor This"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + R, R",
+    "Description": "Rename"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + R, O",
+    "Description": "Move Type to Another File"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + R, V",
+    "Description": "Introduce Variable"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + R, M",
+    "Description": "Extract Method"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + R, P",
+    "Description": "Introduce Parameter"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + R, F",
+    "Description": "Introduce Field"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + R, I",
+    "Description": "Inline Variable"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + N",
+    "Description": "Go to Everything"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Shift + N",
+    "Description": "Go to File"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Alt + Shift + N",
+    "Description": "Go to Symbol"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + F12",
+    "Description": "Go to File Member"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Shift + F12",
+    "Description": "Go to Related Files"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "F12",
+    "Description": "Go to Declaration"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Shift + F12",
+    "Description": "Go to Implementation"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Shift + F12",
+    "Description": "Find Usages"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Shift + F",
+    "Description": "Find Usages Advanced"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Alt + Enter",
+    "Description": "Show Action List"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + E, C",
+    "Description": "Recent Edits"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + E, F",
+    "Description": "Recent Files"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Shift + Backspace",
+    "Description": "Go to Last Edit Location"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Alt + F7",
+    "Description": "Find Usages of Symbol at Caret"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Alt + Page Up",
+    "Description": "Next Usage"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Alt + Page Down",
+    "Description": "Previous Usage"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Shift + Alt + Up",
+    "Description": "Go to Next Member"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Shift + Alt + Down",
+    "Description": "Go to Previous Member"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + E, H",
+    "Description": "View Type Hierarchy"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Alt + F",
+    "Description": "Code Formatting"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + E, L",
+    "Description": "Code Cleanup"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Alt + Insert",
+    "Description": "Generate Code"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Alt + Insert",
+    "Description": "Create File from Template"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Ctrl + Shift + A",
+    "Description": "Inspect This"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Alt + Page Down",
+    "Description": "Next Issue"
+  },
+  {
+    "Category": "ReSharper",
+    "Application": "Visual Studio + ReSharper",
+    "Keys": "Alt + Page Up",
+    "Description": "Previous Issue"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + N",
+    "Description": "Go to Class"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Shift + N",
+    "Description": "Go to File"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Alt + Shift + N",
+    "Description": "Go to Symbol"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Alt + Right/Left",
+    "Description": "Go to Next/Previous Editor Tab"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "F12",
+    "Description": "Go Back to Previous Tool Window"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Esc",
+    "Description": "Go to Editor"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Shift + Esc",
+    "Description": "Hide Active Tool Window"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Shift + F4",
+    "Description": "Close Active Editor Tab"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + G",
+    "Description": "Go to Line"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + E",
+    "Description": "Recent Files Popup"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Alt + Left/Right",
+    "Description": "Navigate Back/Forward"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Shift + Backspace",
+    "Description": "Navigate to Last Edit Location"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Alt + F1",
+    "Description": "Select Current File or Symbol"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + B",
+    "Description": "Go to Declaration"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Alt + B",
+    "Description": "Go to Implementation(s)"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Shift + I",
+    "Description": "Open Quick Definition Lookup"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Shift + B",
+    "Description": "Go to Type Declaration"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + U",
+    "Description": "Go to Super Method/Super Class"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Alt + Up/Down",
+    "Description": "Go to Previous/Next Method"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + ]/[",
+    "Description": "Move to Code Block End/Start"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + F12",
+    "Description": "File Structure Popup"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + H",
+    "Description": "Type Hierarchy"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Shift + H",
+    "Description": "Method Hierarchy"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Alt + H",
+    "Description": "Call Hierarchy"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "F2",
+    "Description": "Next Highlighted Error"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Shift + F2",
+    "Description": "Previous Highlighted Error"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "F4",
+    "Description": "Edit Source"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Enter",
+    "Description": "View Source"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Alt + Home",
+    "Description": "Show Navigation Bar"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "F11",
+    "Description": "Toggle Bookmark"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + F11",
+    "Description": "Toggle Bookmark with Mnemonic"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + 0-9",
+    "Description": "Go to Numbered Bookmark"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Shift + F11",
+    "Description": "Show Bookmarks"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + F",
+    "Description": "Find"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "F3",
+    "Description": "Find Next"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Shift + F3",
+    "Description": "Find Previous"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + R",
+    "Description": "Replace"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Shift + F",
+    "Description": "Find in Path"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Shift + R",
+    "Description": "Replace in Path"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Shift + S",
+    "Description": "Search Structurally"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Shift + M",
+    "Description": "Replace Structurally"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Alt + F7",
+    "Description": "Find Usages"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + F7",
+    "Description": "Find Usages in File"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Shift + F7",
+    "Description": "Highlight Usages in File"
+  },
+  {
+    "Category": "IntelliJ IDEA",
+    "Application": "IntelliJ IDEA",
+    "Keys": "Ctrl + Alt + F7",
+    "Description": "Show Usages"
+  },
+  {
     "Category": "Office",
     "Application": "Word/Excel",
     "Keys": "Ctrl + N",

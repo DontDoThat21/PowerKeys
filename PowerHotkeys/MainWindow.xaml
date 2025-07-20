@@ -82,6 +82,109 @@
             <Setter Property="BorderBrush" Value="#333333"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Padding" Value="4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton Name="ToggleButton"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        Focusable="False"
+                                        IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                        ClickMode="Press">
+                                <ToggleButton.Template>
+                                    <ControlTemplate TargetType="ToggleButton">
+                                        <Border Background="{TemplateBinding Background}" 
+                                              BorderBrush="{TemplateBinding BorderBrush}" 
+                                              BorderThickness="{TemplateBinding BorderThickness}"
+                                              CornerRadius="2">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="20"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Path Grid.Column="1"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Data="M 0 0 L 4 4 L 8 0 Z"
+                                                    Fill="#FFFFFF"/>
+                                            </Grid>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#2D2D2D"/>
+                                                <Setter Property="BorderBrush" Value="#00D084"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </ToggleButton.Template>
+                            </ToggleButton>
+                            <ContentPresenter Name="ContentSite"
+                                            IsHitTestVisible="False"
+                                            Content="{TemplateBinding SelectionBoxItem}"
+                                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                            Margin="{TemplateBinding Padding}"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Left"/>
+                            <Popup Name="Popup"
+                                 Placement="Bottom"
+                                 IsOpen="{TemplateBinding IsDropDownOpen}"
+                                 AllowsTransparency="True"
+                                 Focusable="False"
+                                 PopupAnimation="Slide">
+                                <Grid Name="DropDown"
+                                    SnapsToDevicePixels="True"
+                                    MinWidth="{TemplateBinding ActualWidth}"
+                                    MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border Background="#1E1E1E" 
+                                          BorderBrush="#333333" 
+                                          BorderThickness="1"
+                                          CornerRadius="2">
+                                        <ScrollViewer SnapsToDevicePixels="True">
+                                            <StackPanel IsItemsHost="True" 
+                                                      KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="ToggleButton" Property="BorderBrush" Value="#00D084"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Resources>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Background" Value="#1E1E1E"/>
+                    <Setter Property="Foreground" Value="#FFFFFF"/>
+                    <Setter Property="Padding" Value="4,2"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ComboBoxItem">
+                                <Border Background="{TemplateBinding Background}" 
+                                      BorderThickness="0" 
+                                      Padding="{TemplateBinding Padding}">
+                                    <ContentPresenter/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsHighlighted" Value="True">
+                                        <Setter Property="Background" Value="#00D084"/>
+                                        <Setter Property="Foreground" Value="#000000"/>
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#2D2D2D"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Style.Resources>
         </Style>
 
         <!-- Dark Slider Style -->
@@ -138,52 +241,49 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="9*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!-- Header with Search and Filters -->
-        <Grid Grid.Row="0" Background="#1E1E1E" Margin="0,0,0,8">
+        <Grid Grid.Row="0" Background="#1E1E1E" Margin="0,0,0,4">
             <Grid.Effect>
                 <DropShadowEffect ShadowDepth="1" BlurRadius="3" Opacity="0.4" Color="#000000"/>
             </Grid.Effect>
             
-            <Grid Margin="16,4">
+            <Grid Margin="12,8">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
 
-                </Grid.RowDefinitions>
-
-                <StackPanel Grid.Column="0" Orientation="Horizontal" Grid.RowSpan="2">
-                    <TextBlock Text="Search:" VerticalAlignment="Center" Margin="0,0,8,0" Style="{StaticResource DarkTextBlockStyle}"/>
-                    <TextBox Name="SearchTextBox" Width="200" Height="24"
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="Search:" VerticalAlignment="Center" Margin="0,0,6,0" Style="{StaticResource DarkTextBlockStyle}"/>
+                    <TextBox Name="SearchTextBox" Width="180" Height="20"
                              Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
                              VerticalContentAlignment="Center"
                              Style="{StaticResource DarkTextBoxStyle}"/>
                     
-                    <TextBlock Text="Category:" VerticalAlignment="Center" Margin="16,0,8,0" Style="{StaticResource DarkTextBlockStyle}"/>
-                    <ComboBox Name="CategoryComboBox" Width="150" Height="24"
+                    <TextBlock Text="Category:" VerticalAlignment="Center" Margin="12,0,6,0" Style="{StaticResource DarkTextBlockStyle}"/>
+                    <ComboBox Name="CategoryComboBox" Width="150" Height="22"
                               ItemsSource="{Binding Categories}"
                               SelectedItem="{Binding SelectedCategory}"
-                              Style="{StaticResource DarkComboBoxStyle}"/>
+                              Style="{StaticResource DarkComboBoxStyle}"
+                              MaxDropDownHeight="300"
+                              IsEditable="False"/>
                 </StackPanel>
 
-                <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="16,0">
-                    <TextBlock Text="Columns:" VerticalAlignment="Center" Margin="0,0,8,0" Style="{StaticResource DarkTextBlockStyle}"/>
-                    <Slider Name="ColumnsSlider" Width="100" Minimum="3" Maximum="8" 
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="12,0" VerticalAlignment="Center">
+                    <TextBlock Text="Columns:" VerticalAlignment="Center" Margin="0,0,6,0" Style="{StaticResource DarkTextBlockStyle}"/>
+                    <Slider Name="ColumnsSlider" Width="80" Minimum="3" Maximum="8" 
                             Value="{Binding GridColumns}" TickFrequency="1" IsSnapToTickEnabled="True"
                             Style="{StaticResource DarkSliderStyle}"/>
-                    <TextBlock Text="{Binding GridColumns}" VerticalAlignment="Center" Margin="8,0,0,0" Style="{StaticResource DarkTextBlockStyle}"/>
+                    <TextBlock Text="{Binding GridColumns}" VerticalAlignment="Center" Margin="6,0,0,0" Style="{StaticResource DarkTextBlockStyle}"/>
                 </StackPanel>
 
-                <Button Grid.Column="2" Content="Settings" Width="80" Height="24" 
+                <Button Grid.Column="2" Content="Settings" Width="70" Height="20" 
                         Click="SettingsButton_Click"
                         Style="{StaticResource DarkButtonStyle}"/>
             </Grid>
