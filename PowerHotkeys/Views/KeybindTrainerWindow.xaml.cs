@@ -4,7 +4,11 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Effects;
 using PowerHotkeysWPF.ViewModels;
+using Color = System.Windows.Media.Color;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
+using Point = System.Windows.Point;
 
 namespace PowerHotkeysWPF.Views;
 
@@ -191,18 +195,18 @@ public partial class KeybindTrainerWindow : Window
                 Text = _viewModel.ExpectedKeys[i],
                 FontSize = 20,
                 FontWeight = FontWeights.Bold,
-                Padding = new Thickness(8, 4),
-                Margin = new Thickness(2),
-                HorizontalAlignment = HorizontalAlignment.Center,
-                VerticalAlignment = VerticalAlignment.Center
+                Padding = new System.Windows.Thickness(8, 4, 8, 4),
+                Margin = new System.Windows.Thickness(2, 2, 2, 2)
             };
+            keyBlock.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+            keyBlock.VerticalAlignment = System.Windows.VerticalAlignment.Center;
 
             var border = new Border
             {
                 Child = keyBlock,
-                BorderThickness = new Thickness(2),
+                BorderThickness = new System.Windows.Thickness(2, 2, 2, 2),
                 CornerRadius = new CornerRadius(4),
-                Padding = new Thickness(4)
+                Padding = new System.Windows.Thickness(4, 4, 4, 4)
             };
 
             if (i < _viewModel.CurrentKeyIndex)
@@ -237,9 +241,9 @@ public partial class KeybindTrainerWindow : Window
                     Text = "+",
                     FontSize = 16,
                     Foreground = new SolidColorBrush(Color.FromRgb(176, 176, 176)),
-                    VerticalAlignment = VerticalAlignment.Center,
-                    Margin = new Thickness(4)
+                    Margin = new System.Windows.Thickness(4, 4, 4, 4)
                 };
+                separator.VerticalAlignment = System.Windows.VerticalAlignment.Center;
                 ProgressPanel.Children.Add(separator);
             }
         }

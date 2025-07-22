@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YgWwXp0Cy9MVloE/h4FT5gXSWyodmzegkr8QO1ZTlzeE1L2/HvGj3lSMw0aa6fZ1mvJ/MYSUxqQmT6E9n6iSWQ==",
+  "dgSpecHash": "XAOWgqhzPPA=",
   "success": true,
-  "projectFilePath": "/home/runner/work/PowerKeys/PowerKeys/PowerHotkeys/PowerHotkeys.csproj",
+  "projectFilePath": "C:\\Users\\Ty\\source\\repos\\DontDoThat21\\PowerKeys\\PowerHotkeys\\PowerHotkeys.csproj",
   "expectedPackageFiles": [
-    "/home/runner/.nuget/packages/microsoft.win32.systemevents/8.0.0/microsoft.win32.systemevents.8.0.0.nupkg.sha512",
-    "/home/runner/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
-    "/home/runner/.nuget/packages/system.drawing.common/8.0.0/system.drawing.common.8.0.0.nupkg.sha512"
+    "C:\\Users\\Ty\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\Ty\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Ty\\.nuget\\packages\\system.drawing.common\\8.0.0\\system.drawing.common.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }
