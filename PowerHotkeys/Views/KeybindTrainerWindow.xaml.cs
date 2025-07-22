@@ -101,7 +101,7 @@ public partial class KeybindTrainerWindow : Window
 
     private string GetKeyString(Key key)
     {
-        if (_keyMappings.TryGetValue(key, out string? mapped))
+        if (_keyMappings.TryGetValue(key, out string mapped))
             return mapped;
 
         // Handle regular letter/number keys
