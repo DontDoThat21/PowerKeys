@@ -172,13 +172,11 @@ public partial class KeybindTrainerWindow : Window
         NextButton.IsEnabled = true;
         
         // Auto-advance after delay
-        var timer = new System.Windows.Threading.DispatcherTimer();
-        timer.Interval = TimeSpan.FromSeconds(2);
-        timer.Tick += (s, e) =>
+        var timer = CreateDispatcherTimer(TimeSpan.FromSeconds(2), (s, e) =>
         {
             NextButton_Click(NextButton, new RoutedEventArgs());
-            timer.Stop();
-        };
+            ((System.Windows.Threading.DispatcherTimer)s).Stop();
+        });
         timer.Start();
     }
 
