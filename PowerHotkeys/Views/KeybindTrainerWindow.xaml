@@ -1,0 +1,180 @@
+﻿<Window x:Class="PowerHotkeysWPF.Views.KeybindTrainerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PowerHotkeysWPF.Views"
+        mc:Ignorable="d"
+        Title="Keybind Trainer" 
+        Height="500" Width="700"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="NoResize"
+        Background="#0E0E0E">
+    
+    <Window.Resources>
+        <!-- Import existing dark styles from App.xaml -->
+        <Style x:Key="DarkButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#1E1E1E"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="#333333"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center" 
+                                            Content="{TemplateBinding Content}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#2D2D2D"/>
+                                <Setter Property="BorderBrush" Value="#00D084"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#00D084"/>
+                                <Setter Property="BorderBrush" Value="#00D084"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="KeyDisplayStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#00D084"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+
+        <Style x:Key="KeyToGuessStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="8"/>
+        </Style>
+
+        <Style x:Key="SuccessKeyStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#00FF7F"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="10" Color="#00FF7F"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="InstructionStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#B0B0B0"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="8"/>
+        </Style>
+
+        <Style x:Key="ScoreStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#00D084"/>
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title -->
+        <TextBlock Grid.Row="0" Text="Keybind Trainer" 
+                   FontSize="28" FontWeight="Bold" 
+                   Foreground="#00D084" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,0,0,20"/>
+
+        <!-- Score Display -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+            <TextBlock Text="Score: " Style="{StaticResource ScoreStyle}"/>
+            <TextBlock Name="ScoreText" Text="{Binding Score}" Style="{StaticResource ScoreStyle}"/>
+            <TextBlock Text="/" Style="{StaticResource ScoreStyle}" Margin="4,4,0,4"/>
+            <TextBlock Name="TotalText" Text="{Binding TotalAttempts}" Style="{StaticResource ScoreStyle}" Margin="0,4,4,4"/>
+        </StackPanel>
+
+        <!-- Main Training Area -->
+        <Border Grid.Row="2" Background="#1E1E1E" BorderBrush="#333333" BorderThickness="1" CornerRadius="8" Padding="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Current Keybind Description -->
+                <TextBlock Grid.Row="0" Name="DescriptionText" 
+                           Text="{Binding CurrentKeybind.Description}" 
+                           FontSize="18" Foreground="#FFFFFF" 
+                           HorizontalAlignment="Center" 
+                           TextAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <!-- Keybind to Guess -->
+                <TextBlock Grid.Row="1" Name="KeybindToGuessText" 
+                           Text="{Binding KeybindToGuess}"
+                           Style="{StaticResource KeyToGuessStyle}"
+                           Margin="0,0,0,20"/>
+
+                <!-- Progress Display -->
+                <StackPanel Grid.Row="2" Name="ProgressPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <!-- This will be populated dynamically with key segments -->
+                </StackPanel>
+
+                <!-- Instruction Text -->
+                <TextBlock Grid.Row="3" Name="InstructionText" 
+                           Text="Press the keys to match the keybind above.&#x0a;Press Spacebar for a hint if you're stuck."
+                           Style="{StaticResource InstructionStyle}"/>
+
+                <!-- Feedback Area -->
+                <TextBlock Grid.Row="4" Name="FeedbackText" 
+                           Text="" 
+                           FontSize="16" 
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="0,20,0,0"/>
+            </Grid>
+        </Border>
+
+        <!-- Control Buttons -->
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Button Name="StartButton" Content="Start Training" Width="120" Height="30"
+                    Click="StartButton_Click" 
+                    Style="{StaticResource DarkButtonStyle}"
+                    Margin="0,0,10,0"/>
+            <Button Name="NextButton" Content="Next Keybind" Width="120" Height="30"
+                    Click="NextButton_Click" 
+                    Style="{StaticResource DarkButtonStyle}"
+                    Margin="0,0,10,0"
+                    IsEnabled="False"/>
+            <Button Name="CloseButton" Content="Close" Width="80" Height="30"
+                    Click="CloseButton_Click" 
+                    Style="{StaticResource DarkButtonStyle}"/>
+        </StackPanel>
+    </Grid>
+</Window>

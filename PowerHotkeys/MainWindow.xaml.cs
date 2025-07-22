@@ -227,6 +227,29 @@ public partial class MainWindow : Window
         // HideWindow();
     }
 
+    private void KeybindTrainerButton_Click(object sender, RoutedEventArgs e)
+    {
+        try
+        {
+            var trainerWindow = new KeybindTrainerWindow();
+            trainerWindow.Owner = this;
+            
+            // Hide main window
+            HideWindow();
+            
+            // Show trainer window
+            trainerWindow.ShowDialog();
+            
+            // Show main window when trainer closes
+            ShowWindow();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"Failed to show keybind trainer: {ex.Message}");
+            MessageBox.Show("Failed to open keybind trainer window.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
+
     private void SettingsButton_Click(object sender, RoutedEventArgs e)
     {
         try
