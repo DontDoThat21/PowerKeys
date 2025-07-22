@@ -127,7 +127,7 @@ public partial class KeybindTrainerWindow : Window
             UpdateProgressDisplay();
             
             // Reset instruction after a delay
-            var timer = new System.Windows.Threading.DispatcherTimer();
+            var timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(2);
             timer.Tick += (s, e) =>
             {
