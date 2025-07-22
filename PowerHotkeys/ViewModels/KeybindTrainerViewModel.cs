@@ -233,7 +233,7 @@ public class KeybindTrainerViewModel : INotifyPropertyChanged
             "leftalt" or "rightalt" or "alt" => "alt",
             "leftshift" or "rightshift" or "shift" => "shift",
             "leftwin" or "rightwin" or "win" or "windows" => "win",
-            "space" or "spacebar" => " ",
+            "space" or "spacebar" => "space",
             "enter" or "return" => "enter",
             "escape" or "esc" => "escape",
             _ => key.Trim().ToLowerInvariant()
