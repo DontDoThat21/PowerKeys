@@ -265,6 +265,16 @@ public partial class MainWindow : Window
         }
     }
 
+    private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+    {
+        HideWindow();
+    }
+
+    private void ExitButton_Click(object sender, RoutedEventArgs e)
+    {
+        ExitApplication();
+    }
+
     protected override void OnSourceInitialized(EventArgs e)
     {
         base.OnSourceInitialized(e);
