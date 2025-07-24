@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PowerHotkeysWPF.Views"
         mc:Ignorable="d"
         Title="PowerKeys Settings" 
-        Height="400" Width="500"
+        Height="543" Width="500"
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize"
         Background="#0E0E0E" WindowStyle="None">
@@ -339,11 +339,11 @@
             <!-- Information Section -->
             <GroupBox Header="Information" Padding="12" Style="{StaticResource DarkGroupBoxStyle}">
                 <StackPanel>
-                    <TextBlock Text="PowerKeys v1.0.0" FontWeight="Bold" Margin="0,0,0,4" Style="{StaticResource DarkTextBlockStyle}"/>
+                    <TextBlock Text="PowerKeys v0.0.1" FontWeight="Bold" Margin="0,0,0,4" Style="{StaticResource DarkTextBlockStyle}"/>
                     <TextBlock Text="Keyboard shortcuts reference tool" 
                                FontSize="11" Margin="0,0,0,4"
                                Style="{StaticResource DarkSecondaryTextBlockStyle}"/>
-                    <TextBlock Text="© 2024 PowerKeys" 
+                    <TextBlock Text="© 2025 PowerKeys" 
                                FontSize="11"
                                Style="{StaticResource DarkSecondaryTextBlockStyle}"/>
                 </StackPanel>
