@@ -265,6 +265,30 @@ public partial class MainWindow : Window
         }
     }
 
+    private void MonkeysButton_Click(object sender, RoutedEventArgs e)
+    {
+        try
+        {
+            // Filter to show only monkey shortcuts
+            _viewModel.SelectedCategory = "Monkeys";
+            _viewModel.SearchText = "";
+            
+            // Show a fun monkey message
+            MessageBox.Show("🐒🍌 FUCKING MONKEYS EVERYWHERE! 🍌🐒\n\n" +
+                          "Welcome to the monkey zone! 🙈🙉🙊\n" +
+                          "Check out all the monkey shortcuts below!\n\n" +
+                          "🌴 Swing through the jungle of keyboard shortcuts! 🌴",
+                          "Monkey Madness!", 
+                          MessageBoxButton.OK, 
+                          MessageBoxImage.Information);
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"Failed to show monkeys: {ex.Message}");
+            MessageBox.Show("The monkeys escaped! 🐒💨", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
+
     protected override void OnSourceInitialized(EventArgs e)
     {
         base.OnSourceInitialized(e);

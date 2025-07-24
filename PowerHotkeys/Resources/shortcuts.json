@@ -964,5 +964,65 @@
     "Application": "Word/Excel",
     "Keys": "Ctrl + U",
     "Description": "Underline"
+  },
+  {
+    "Category": "Monkeys",
+    "Application": "Fun",
+    "Keys": "Ctrl + M",
+    "Description": "🐒 Summon the Monkey Squad"
+  },
+  {
+    "Category": "Monkeys",
+    "Application": "Fun",
+    "Keys": "Alt + M",
+    "Description": "🙉 Monkey See, Monkey Do"
+  },
+  {
+    "Category": "Monkeys",
+    "Application": "Fun",
+    "Keys": "Shift + M",
+    "Description": "🙈 Hear No Evil Monkey"
+  },
+  {
+    "Category": "Monkeys",
+    "Application": "Fun",
+    "Keys": "Ctrl + Alt + M",
+    "Description": "🙊 Speak No Evil Monkey"
+  },
+  {
+    "Category": "Monkeys",
+    "Application": "Fun",
+    "Keys": "Ctrl + Shift + M",
+    "Description": "🐵 Go Absolutely Bananas"
+  },
+  {
+    "Category": "Monkeys",
+    "Application": "Fun",
+    "Keys": "Win + M",
+    "Description": "🍌 Banana Time!"
+  },
+  {
+    "Category": "Monkeys",
+    "Application": "Fun",
+    "Keys": "F12 + M",
+    "Description": "🌴 Swing Through the Jungle"
+  },
+  {
+    "Category": "Monkeys",
+    "Application": "Fun",
+    "Keys": "Ctrl + B + M",
+    "Description": "🐒 Barrel of Monkeys Mode"
+  },
+  {
+    "Category": "Monkeys",
+    "Application": "Fun",
+    "Keys": "Alt + Shift + M",
+    "Description": "🎪 Circus Monkey Madness"
+  },
+  {
+    "Category": "Monkeys",
+    "Application": "Fun",
+    "Keys": "Ctrl + M + M",
+    "Description": "🍌🐒 FUCKING MONKEYS EVERYWHERE!"
   }
 ]
