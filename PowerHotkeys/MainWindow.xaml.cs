@@ -46,7 +46,7 @@ public partial class MainWindow : Window
     {
         // Window properties
         ShowInTaskbar = false;
-        WindowStyle = WindowStyle.SingleBorderWindow;
+        // WindowStyle is already set to None in XAML
         Topmost = true;
         
         // Hide window initially

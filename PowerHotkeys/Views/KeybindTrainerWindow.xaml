@@ -8,7 +8,7 @@
         Title="Keybind Trainer" 
         Height="500" Width="700"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="SingleBorderWindow"
+        WindowStyle="None"
         ResizeMode="NoResize"
         Background="#0E0E0E">
     
