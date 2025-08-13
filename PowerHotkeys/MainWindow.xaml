@@ -283,9 +283,29 @@
                     <TextBlock Text="{Binding GridColumns}" VerticalAlignment="Center" Margin="6,0,0,0" Style="{StaticResource DarkTextBlockStyle}"/>
                 </StackPanel>
 
-                <Button Grid.Column="2" Content="Settings" Width="70" Height="20" 
-                        Click="SettingsButton_Click"
-                        Style="{StaticResource DarkButtonStyle}"/>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="0,0,0,0">
+                    <Button Content="Keybind Trainer" Width="100" Height="20" 
+                            Click="KeybindTrainerButton_Click"
+                            Style="{StaticResource DarkButtonStyle}"
+                            Margin="0,0,8,0"/>
+                    <Button Content="Settings" Width="70" Height="20" 
+                            Click="SettingsButton_Click"
+                            Style="{StaticResource DarkButtonStyle}"
+                            Margin="0,0,8,0"/>
+                    <Button Name="MinimizeButton" Content="−" Width="30" Height="20" 
+                            Click="MinimizeButton_Click"
+                            Style="{StaticResource DarkButtonStyle}"
+                            ToolTip="Minimize to system tray"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            Margin="0,0,4,0"/>
+                    <Button Name="ExitButton" Content="✕" Width="30" Height="20" 
+                            Click="ExitButton_Click"
+                            Style="{StaticResource DarkButtonStyle}"
+                            ToolTip="Exit application"
+                            FontSize="12"
+                            FontWeight="Bold"/>
+                </StackPanel>
             </Grid>
         </Grid>
 
