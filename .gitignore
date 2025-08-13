@@ -404,3 +404,7 @@ appsettings.Local.json
 
 # Application specific
 # Include any application-specific files you want to ignore
+/PowerHotkeys/obj/PowerHotkeys.csproj.nuget.dgspec.json
+/PowerHotkeys/obj/PowerHotkeys.csproj.nuget.g.props
+/PowerHotkeys/obj/project.assets.json
+/PowerHotkeys/obj/project.nuget.cache
