@@ -6,6 +6,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using PowerHotkeysWPF.ViewModels;
+using System.Windows.Threading;
 using Color = System.Windows.Media.Color;
 using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 using Point = System.Windows.Point;
@@ -170,13 +171,15 @@ public partial class KeybindTrainerWindow : Window
 
         // Enable Next button
         NextButton.IsEnabled = true;
-        
+
         // Auto-advance after delay
-        var timer = CreateDispatcherTimer(TimeSpan.FromSeconds(2), (s, e) =>
+        var timer = new DispatcherTimer();
+        timer.Interval = TimeSpan.FromSeconds(1.5);
+        timer.Tick += (s, e) =>
         {
             NextButton_Click(NextButton, new RoutedEventArgs());
-            ((System.Windows.Threading.DispatcherTimer)s).Stop();
-        });
+            timer.Stop();
+        };
         timer.Start();
     }
 
