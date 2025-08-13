@@ -2,6 +2,8 @@
 
 A Windows desktop application that displays a grid of useful keyboard shortcuts for power users. The app runs silently in the background, accessible via system tray, and can be instantly shown/hidden using a global hotkey combination.
 
+<img width="1388" height="1106" alt="image" src="https://github.com/user-attachments/assets/6bea6a5b-a47b-4e5f-a675-879f71da317d" />
+
 ## Features
 
 ### 🚀 Core Features (MVP)
