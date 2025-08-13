@@ -259,15 +259,15 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Height="46">
                     <TextBlock Text="Search:" VerticalAlignment="Center" Margin="0,0,6,0" Style="{StaticResource DarkTextBlockStyle}"/>
-                    <TextBox Name="SearchTextBox" Width="180" Height="20"
+                    <TextBox Name="SearchTextBox" Width="180" Height="35"
                              Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
                              VerticalContentAlignment="Center"
                              Style="{StaticResource DarkTextBoxStyle}"/>
                     
                     <TextBlock Text="Category:" VerticalAlignment="Center" Margin="12,0,6,0" Style="{StaticResource DarkTextBlockStyle}"/>
-                    <ComboBox Name="CategoryComboBox" Width="150" Height="22"
+                    <ComboBox Name="CategoryComboBox" Width="150" Height="35"
                               ItemsSource="{Binding Categories}"
                               SelectedItem="{Binding SelectedCategory}"
                               Style="{StaticResource DarkComboBoxStyle}"
